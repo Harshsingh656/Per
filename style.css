@@ -1,0 +1,100 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevents hearts from scrolling */
+}
+
+header {
+  background-color: #ffcccb;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.perfume-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.perfume {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.perfume img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.perfume:hover {
+  transform: scale(1.05);
+}
+
+.message-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #ffcccb;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Falling Hearts Effect */
+#falling-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Ensures hearts don't interfere with user clicks */
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: red;
+  animation: fall 5s infinite ease-in;
+  transform-origin: center center;
+}
+
+/* Keyframes for falling hearts */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
