@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Virtual Perfume Boutique</h1>
+    <p>Each fragrance here is handpicked with love just for you.</p>
+  </header>
+
+  <div class="perfume-container">
+    <div class="perfume" id="floral" onclick="showMessage('floral')">
+      <img src="floral-perfume.jpg" alt="Floral Perfume">
+      <h2>Floral</h2>
+    </div>
+    <div class="perfume" id="woody" onclick="showMessage('woody')">
+      <img src="woody-perfume.jpg" alt="Woody Perfume">
+      <h2>Woody</h2>
+    </div>
+    <div class="perfume" id="fresh" onclick="showMessage('fresh')">
+      <img src="fresh-perfume.jpg" alt="Fresh Perfume">
+      <h2>Fresh</h2>
+    </div>
+    <div class="perfume" id="sweet" onclick="showMessage('sweet')">
+      <img src="sweet-perfume.jpg" alt="Sweet Perfume">
+      <h2>Sweet</h2>
+    </div>
+  </div>
+
+  <div id="message-box" class="message-box">
+    <p id="message"></p>
+    <button onclick="closeMessage()">Close</button>
+  </div>
+
+  <div id="falling-hearts"></div> <!-- Falling hearts container -->
+
+  <footer>
+    <p>Thank you for visiting our virtual boutique. Each fragrance is a token of love and appreciation.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
